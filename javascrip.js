@@ -3,8 +3,8 @@
    function encriptar(){
 
       let mensaje = document.getElementById("input_text").value;
-      let lowercaseWithoutMayusandAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
-      if(lowercaseWithoutMayusandAccent.test(mensaje)){
+      let lowercaseWithoutMayandAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
+      if(lowercaseWithoutMayandAccent.test(mensaje)){
 
          mensaje = mensaje.replace(/e/g, "enter");
          mensaje = mensaje.replace(/i/g, "imes");
@@ -32,8 +32,8 @@ encriptarButton.addEventListener("click", encriptar);
 function desencriptar(){
 
    let mensaje = document.getElementById("input_text").value;
-   let lowercaseWithoutMayusandAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
-   if(lowercaseWithoutMayusandAccent.test(mensaje)){
+   let lowercaseWithoutMayandAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
+   if(lowercaseWithoutMayandAccent.test(mensaje)){
 
       mensaje = mensaje.replace(/enter/g, "e");
       mensaje = mensaje.replace(/imes/g, "i");
