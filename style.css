@@ -125,8 +125,8 @@ h2{
     font-family: 'DePixelBreinFett';
 }
 .hearth{
-    width: 300px;
-    height: 350px;  
+    width: 200px;
+    height: 250px;  
 }
 .displays{
     position: absolute;
@@ -186,6 +186,9 @@ footer{
         height: 450px;
         }
 }
+footer{
+    height: 117px;
+}
 
 @media screen and (max-width:745px){
 
@@ -216,6 +219,7 @@ h2{
     font-size: 15px;
 }
 }
+
 @media screen and (max-width:549px){
 .main_boxes{
         display: block;
@@ -242,5 +246,30 @@ h2{
 h3{
     font-size: 12px;
 }
+footer{
+    height: 120px;
+}
+}
 
+@media screen and (max-width:480px){
+.first_side{
+    width: 100%;
+    text-align: center;
+}
+.input_text{
+    width: 350px;
+}
+.second_side{
+    width: 100%
+}
+.output_text{
+    width: 350px;
+}
+.hearth{
+    width: 50px;
+    height: 100px;
+}
+footer{
+    height: 200px;
+}
 }
