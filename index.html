@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-
-<html lang="es">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Encryptor</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
     
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width">
-        <title>Encriptador</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
-    </head>
+</head>
 
-    <body>
-        <main>
-                <div class="vector">
-                    <img src="imagenes/Vector.png" class="vector_img">
+<body>
+    <header> 
+        <div class="header">
+            <img class="logo" src="imagenes/Vector.png">
+            <h1 class="header_title">ENCRYPTER</h1>
+        </div>       
+    </header>
+
+    <main>
+        <div class="main_boxes">
+            <div class="first_side">
+                <textarea spellcheck="false" cols="60" rows="30" class="input_text" id="input_text" placeholder="ENTER TEXT HERE"></textarea>
+                <h2>&#10082; Only lower case and no accents.</h2>
+                <input type="button" value="Encrypt" class="button" id="encrypt_button">
+                <input type="button" value="Decrypt" class="button" id="decrypt_button">
+            </div>
+
+            <div class="second_side">
+                <div class="box">
+                    <textarea cols="60" rows="30" class="output_text" id="output_text" readonly></textarea>
+                    <div class="displays" id="displays">
+                        <img class="hearth" id="hearth" src="imagenes/corazon.png">
+                        <h2 class="waiting_text">WAITING FOR YOUR TEXT...</h2>
+                    </div>                   
                 </div>
+                <div class="button_copy">
+                    <input type="button" value="Copy/Clear" class="copy_button" id="copy_button">
+                </div>
+            </div>
+        </div>
         
-                <div class="ingresar_texto">
-                    <h1>Ingrese el texto aquí</h1>
-                    <div class="text_area">
-                        <textarea cols="50" rows="30" class="input_text" id="input_text" placeholder="..."></textarea>
-                        <h3 class="text_condition">&#10082; Solo letras minúsculas y sin acentos.</h3>
-                    </div>
-                </div>
+    </main>
 
-                <section class="buttons_position">
-                    <input type="button" value="Encriptar" class="button" id="encriptar_boton">
-                    <input type="button" value="Desencriptar" class="button" id="desencriptar_boton">
-                </section>
-
-                <div class="mostrar_mensaje">
-                <textarea readonly cols="50" rows="30" class="mensaje_encriptado" id="mensaje_encriptado"></textarea>
-                </div>
-
-                <div class="esperando_mensaje" id="display_esperandoMensaje">
-                    <img class="munheco" id="munheco" src="imagenes/Muñeco.png">
-                    <h3 class="primer_mensaje">Ningún mensaje fue encontrado</h3>
-                    <h3 class="segundo_mensaje">ingresa el texto que desees encriptar o desencriptar.</h3>
-                </div>
-                <div>
-                    <input type="button" value="Copiar/Limpiar" class="copiar_boton" id="copiar_boton">
-                </div>
-        </main>
-        
-        <script src="javascrip.js"></script>
-
-    </body>
+    <footer>
+        <div class="bg_copyright">
+            <h3>&#169; Encrypter by Daniel Gomez 2023</h3>
+        </div>
+    </footer>
     
+    <script src="javascrip.js"></script>
+
+</body>
+

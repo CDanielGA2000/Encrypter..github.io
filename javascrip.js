@@ -1,69 +1,86 @@
+function encrypt(){
 
-   
-   function encriptar(){
+    let message = document.getElementById("input_text").value;
+    let lowercaseWithoutAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
+    if(lowercaseWithoutAccent.test(message)){
 
-      let mensaje = document.getElementById("input_text").value;
-      let lowercaseWithoutMayandAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
-      if(lowercaseWithoutMayandAccent.test(mensaje)){
+    message = message.replace(/e/g, "enter");
+    message = message.replace(/i/g, "imes");
+    message = message.replace(/a/g, "ai");
+    message = message.replace(/o/g, "ober");
+    message = message.replace(/u/g, "ufat");
+    document.getElementById("output_text").value = message; 
+    document.getElementById("input_text").value = "";
 
-         mensaje = mensaje.replace(/e/g, "enter");
-         mensaje = mensaje.replace(/i/g, "imes");
-         mensaje = mensaje.replace(/a/g, "ai");
-         mensaje = mensaje.replace(/o/g, "ober");
-         mensaje = mensaje.replace(/u/g, "ufat");
-         document.getElementById("mensaje_encriptado").value = mensaje; 
-         document.getElementById("input_text").value = "";
+    let displayObjects = document.getElementById("displays");
+        displayObjects.style.display = "none";
 
-      let displayObjetos = document.getElementById("display_esperandoMensaje");
-         displayObjetos.style.display = "none";
-
-      let copiarBoton = document.getElementById("copiar_boton");
-      copiarBoton.style.display = "block";
-   }  else{
-      alert("Solo minúsculas y sin acentos")
-   }
+    let copyButton = document.getElementById("copy_button");
+    copyButton.style.display = "block";
+}  else{
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Only lower case and no accents',
+        showConfirmButton: false,
+        timer: 1800
+        })
 }
-var encriptarButton = document.getElementById("encriptar_boton");
-encriptarButton.addEventListener("click", encriptar);
+}
+var encryptButton = document.getElementById("encrypt_button");
+encryptButton.addEventListener("click", encrypt);
 
 //COMPLETED THE ENCRYPT FUNCTION IN THE BUTTON//
 
+function decrypt(){
 
-function desencriptar(){
+ let message = document.getElementById("input_text").value;
+ let lowercaseWithoutAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
+ if(lowercaseWithoutAccent.test(message)){
 
-   let mensaje = document.getElementById("input_text").value;
-   let lowercaseWithoutMayandAccent = /^[^ÁÉÍÓÚÑáéíóúA-Z]+$/;
-   if(lowercaseWithoutMayandAccent.test(mensaje)){
+    message = message.replace(/enter/g, "e");
+    message = message.replace(/imes/g, "i");
+    message = message.replace(/ai/g, "a");
+    message = message.replace(/ober/g, "o");
+    message = message.replace(/ufat/g, "u");
+    document.getElementById("output_text").value = message; 
+    document.getElementById("input_text").value = "";
 
-      mensaje = mensaje.replace(/enter/g, "e");
-      mensaje = mensaje.replace(/imes/g, "i");
-      mensaje = mensaje.replace(/ai/g, "a");
-      mensaje = mensaje.replace(/ober/g, "o");
-      mensaje = mensaje.replace(/ufat/g, "u");
-      document.getElementById("mensaje_encriptado").value = mensaje; 
-      document.getElementById("input_text").value = "";
+    let displayObjects = document.getElementById("displays");
+        displayObjects.style.display = "none";
 
-   let displayObjetos = document.getElementById("display_esperandoMensaje");
-      displayObjetos.style.display = "none";
-
-   let copiarBoton = document.getElementById("copiar_boton");
-   copiarBoton.style.display = "block";
-}  else{
-   alert("Solo minúsculas y sin acentos")
+    let copyButton = document.getElementById("copy_button");
+    copyButton.style.display = "block";
+    }  else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Only lower case and no accents',
+            showConfirmButton: false,
+            timer: 1800
+            })
+    }
 }
-}
-var desencriptarButton = document.getElementById("desencriptar_boton");
-desencriptarButton.addEventListener("click", desencriptar);
+var decryptButton = document.getElementById("decrypt_button");
+decryptButton.addEventListener("click", decrypt);
 
 //COMPLETED THE DESENCRYPT FUNCTION IN THE BUTTON//
 
 
-   function copiar(){
-      
-      let copiarTexto = document.getElementById("mensaje_encriptado").value;
-      navigator.clipboard.writeText(copiarTexto);
-      document.getElementById("mensaje_encriptado").value = "";
-      }
+function copy_clear(){
+    
+    let copyText = document.getElementById("output_text").value;
+    navigator.clipboard.writeText(copyText);
+    document.getElementById("output_text").value = "";
+    Swal.fire({
+        icon: 'success',
+        title: 'Copied Message',
+        showConfirmButton: false,
+        timer: 1000
+        })
+        let displayObjects = document.getElementById("displays");
+        displayObjects.style.display = "block";
+    }
 
-var copiarButton = document.getElementById("copiar_boton");
-copiarButton.addEventListener("click", copiar);
+var copyButton = document.getElementById("copy_button");
+copyButton.addEventListener("click", copy_clear);
