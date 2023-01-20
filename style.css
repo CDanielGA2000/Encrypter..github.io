@@ -240,6 +240,10 @@ h2{
     width: 100%;
     height: 200px;
 }
+.hearth{
+    width: 150px;
+    height: 150px;
+}
 .copy_button{
     margin: 0px;
 }
