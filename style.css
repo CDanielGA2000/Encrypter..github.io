@@ -6,7 +6,7 @@
 body{
     font-family: 'DePixelBreinFett';
     background: url(imagenes/simon-lee-M-6QQXJ8AG4-unsplash.jpg);
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
 }
 
@@ -335,3 +335,55 @@ footer{
         margin-top: 260px;
         height: 120px;
     }
+}
+
+@media screen and (min-width: 2560px) and (max-height: 1440px) {
+    
+                .logo{
+                    width: 100px;
+                    height: 100px;
+                }
+                .header{
+                    padding-top: 50px;
+                    font-size: 100px;
+                }
+                .main_boxes{
+                    padding-top: 100px;
+                    height: 1100px;
+                }
+                
+                .first_side{
+                    height: 100%;
+                }
+                .input_text{
+                    width: 900px;
+                    height: 800px;
+                }
+                h2{
+                    font-size: 30px;
+                }
+                .button{
+                    width: 250px;
+                    height: 100px;
+                    font-size: 30px;
+                    border-radius: 30px;
+                }
+                .second_side{
+                    height: 100%;
+                }
+                .output_text{
+                    width: 900px;
+                    height: 800px;
+                }
+                .copy_button{
+                    width: 250px;
+                    height: 100px;
+                    font-size: 30px;
+                    border-radius: 30px;
+                }
+                footer{
+                    margin-top:600px;
+                    height: 120px;
+                    font-size: 25px;
+                }
+        }
