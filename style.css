@@ -295,7 +295,8 @@ footer {
 
 @media screen and (max-width:500px) {
     body{
-        background-size: cover;
+        background-size: auto;
+        background-position: 10%;
     }
     .first_side {
         width: 100%;
