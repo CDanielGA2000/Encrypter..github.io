@@ -59,8 +59,8 @@ main{
     padding: 10px;
     resize: none;
     outline: none;
-    max-width: 447px;
-    max-height: 450px;
+    width: 447px;
+    height: 450px;
     font-size: 20px;
     color: black;
     border-radius: 10px;
@@ -114,8 +114,8 @@ h2{
     padding: 10px;
     resize: none;
     outline: none;
-    max-width: 447px;
-    max-height: 450px;
+    width: 447px;
+    height: 450px;
     font-size: 20px;
     color: black;
     border-radius: 10px;
@@ -174,6 +174,8 @@ footer{
 
 
 /*Media query*/
+
+
 
 @media screen and (max-width:948px){
 
@@ -242,7 +244,7 @@ h2{
 }
 .hearth{
     width: 150px;
-    height: 150px;
+    height: 100px;
 }
 .copy_button{
     margin: 0px;
@@ -277,3 +279,59 @@ footer{
     height: 200px;
 }
 }
+@media screen and (min-width: 1920px) and (max-height: 1080px) {
+    body{
+        height: 1080px;
+    }
+    header{
+        height: 100px;
+    }
+    .header{
+        width: 90%;
+    }
+    .logo{
+        width: 120px;
+        height: 60px;
+        padding-top: 20px;
+    }
+    h1{
+        font-size: 70px;
+        padding-top: 30px;
+    }
+    .main_boxes{
+        height: 800px;
+    }
+    
+    .first_side{
+        height: 100%;
+    }
+    .input_text{
+        width: 700px;
+        height: 500px;
+    }
+    h2{
+        font-size: 23px;
+    }
+    .button{
+        width: 200px;
+        height: 80px;
+        font-size: 25px;
+        border-radius: 30px;
+    }
+    .second_side{
+        height: 100%;
+    }
+    .output_text{
+        width: 700px;
+        height: 500px;
+    }
+    .copy_button{
+        width: 200px;
+        height: 80px;
+        font-size: 25px;
+        border-radius: 30px;
+    }
+    footer{
+        margin-top: 260px;
+        height: 120px;
+    }
