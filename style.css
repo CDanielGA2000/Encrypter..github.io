@@ -191,6 +191,13 @@ footer {
 .bg_copyright {
     color: white;
 }
+.social_media{
+    font-size: 50px;
+    text-align: center;
+}
+#twitter, #GitHub{
+    color: white;
+}
 
 
 /*Media query*/
